@@ -1,0 +1,35 @@
+Use database test_database;
+Describe table AR_Sales;
+select* from Ar_sales;
+
+select * from Ar_sales where order_date between '2021-01-16'and '2021-02-01';
+
+select product_id from AR_Sales limit 2;
+
+create table Ar_sales_copy like Ar_sales;
+
+show database test_database;"TEST_DATABASE"
+
+--- Below mentioned code will be used to copy table without data.
+
+create table transport_vendor_list_copy  like transport_vendor_list;
+
+--- Below mentioned code will be used to copy table along with data.
+
+create table transport_vendor_list_data as select * from transport_vendor_list;
+
+select*from transport_vendor_list_data;
+
+
+--- if task is to drop primary key from existing table and add one new column with primary key then first drop PK then add column and then add primary key.
+
+alter table Agents_Dup add column pan varchar(10);
+
+alter table Agents_Dup add primary key (pan);
+
+
+--- if task is to drop primary key from existing table and add one new column with primary key then first drop PK then add column and then add primary key.
+
+alter table Agents_Dup add column pan varchar(10);
+
+alter table Agents_Dup add primary key (pan);
